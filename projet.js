@@ -1,6 +1,13 @@
 function Afficher(){
-	Go = document.getElementById('divamontrer');
-		Go.style.display = 'block';
+	
+	const Hidden=document.getElementsByClassName('page1');	
+	const Look=document.getElementsByClassName('MegaDiv');
+	//Go = document.getElementById('divamontrer');
+	
+	
+	 	Hidden[0].style.display='none';
+		Look[0].style.display='block';
+		//Go.style.display = 'block';
 
 }
 

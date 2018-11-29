@@ -1,3 +1,17 @@
+function Afficher(){
+	
+	const Hidden=document.getElementsByClassName('page1');	
+	const Look=document.getElementsByClassName('MegaDiv');
+	//Go = document.getElementById('divamontrer');
+	
+	console.log(Hidden[)	
+	
+	 	Hidden[0].style.display='none';
+		Look[0].style.display='block';
+		//Go.style.display = 'block';
+
+}
+
 function Afficher2()	{
 	
 	divShow = document.getElementById('divamontrer1');

@@ -8,15 +8,44 @@
     </head>
     
     <body>
+    		<div class="page1" style="display:block;">
+    			<h1 id="titre">TU VEUX BOIRE ?</h1>
+    			<div class="nbr_joueurs">
+					<h1 id="phrase">Indiquez le nombre de joueurs</h1>		
+					<div class="separation">
+						<input class="joueurs" type="submit" value="2 joueurs" onClick="Afficher2()"/>
+						<input class="joueurs" type="submit" value="3 joueurs" onClick="Afficher3()"/>
+						<input class="joueurs" type="submit" value="4 joueurs" onClick="Afficher4()"/>
+						
+						<div id="divamontrer1" style="display:none;"><input type="text" class="joueur1 " value="joueur1" /></div>
+	 					<div id="divamontrer2" style="display:none;"><input type="text" class="joueur2 " value="joueur2" /></div>
+						<div id="divamontrer3" style="display:none;"><input type="text" class="joueur3 " value="joueur3" /></div>
+						<div id="divamontrer4" style="display:none;"><input type="text" class="joueur4 " value="joueur4" /></div>
+					</div>		
+					
+					<div class="separation1"> <input class="go" type="submit" value="Commencer !" onClick="Afficher()"/></div>
+					
+				</div>
+			
+				<div class="bas"></div>
+				
+				<div id="dateheure1">
+					<div id="date"></div>
+					<div id="heure"></div>
+				</div>
+			</div>
 
-		<div class="MegaDiv">
-			<div class="you"><img class="tapis" alt="cute carpet" src="game_carpet.jpg"/> </div>
-			 <h2 class="joueur1">Joueur1</h2> 
-			 <h2 class="joueur2">Joueur2</h2>
-			 <h2 class="joueur3">Joueur3</h2>
-			 <h2 class="joueur4">Joueur4</h2>
+<!-- ----------------changement de page-------------- -->
+
+
+		<div class="MegaDiv" style="display:none;">
+			<div class="fond_tapis"><img class="tapis" alt="cute carpet" src="game_carpet.jpg"/> </div>
+			 <h2 class="joueurA">Joueur1</h2> 
+			 <h2 class="joueurA">Joueur2</h2>
+			<div id="divamontrer" style="display:none;"> <h2 class="joueurC">Joueur3</h2></div>
+			<div id="divamontrer" style="display:none;"> <h2 class="joueurD">Joueur4</h2></div>
 			 
-			<div id="dateheure">
+			<div id="dateheure2">
 					<div id="date"></div>
 					<div id="heure"></div>
 			</div>
@@ -24,22 +53,7 @@
 		</div>
 		
 	<script type="text/javascript" src="projet.js" >
-		var vdate=document.getElementById("date");
-		var date=new Date;
-		var annee=date.getFullYear();
-		var mois=date.getMonth();
-		var jour=date.getDate();
-		vdate.innerHTML+=jour+'/'+mois+'/'+annee;
-
-		var vheure=document.getElementById("heure");
-		var heure=new Date()
-		var h=heure.getHours();
-		if (h<10) {h = "0" + h}
-		var m=heure.getMinutes();
-		if (m<10) {m = "0" + m}
-		var s=heure.getSeconds();
-		if (s<10) {s = "0" + s}
-		vheure.innerHTML+=h+':'+m+':'+s;
+		
 	</script>
   </body>
     
