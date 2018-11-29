@@ -1,0 +1,41 @@
+.nbr_joueurs{
+	color:black;
+	background-color:#8B0000;
+	text-align: center;
+	border: solid #8B0000;
+	border-radius: 7px;
+	
+
+}
+
+.bas{
+	background-color: white;
+	height: 70px;
+
+}
+
+body{
+	 display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    margin: 0;
+    
+ 
+}
+
+.joueurs:hover{
+
+    background-color:#8B0000 ;
+    
+}
+
+.joueurs{
+	border-radius: 5px;
+}
+
+#dateheure{
+color: black;}
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Projet</title>
+        <link href="styleProjet.css" rel="stylesheet">
+    </head>
+    
+    <body>
+
+		<div class="MegaDiv">
+			<div class="you"><img class="tapis" alt="cute carpet" src="game_carpet.jpg"/> </div>
+			 <h2 class="joueur1">Joueur1</h2> 
+			 <h2 class="joueur2">Joueur2</h2>
+			 <h2 class="joueur3">Joueur3</h2>
+			 <h2 class="joueur4">Joueur4</h2>
+			 
+			<div id="dateheure">
+					<div id="date"></div>
+					<div id="heure"></div>
+			</div>
+		
+		</div>
+		
+	<script type="text/javascript" src="projet.js" >
+		var vdate=document.getElementById("date");
+		var date=new Date;
+		var annee=date.getFullYear();
+		var mois=date.getMonth();
+		var jour=date.getDate();
+		vdate.innerHTML+=jour+'/'+mois+'/'+annee;
+
+		var vheure=document.getElementById("heure");
+		var heure=new Date()
+		var h=heure.getHours();
+		if (h<10) {h = "0" + h}
+		var m=heure.getMinutes();
+		if (m<10) {m = "0" + m}
+		var s=heure.getSeconds();
+		if (s<10) {s = "0" + s}
+		vheure.innerHTML+=h+':'+m+':'+s;
+	</script>
+  </body>
+    
+</html>

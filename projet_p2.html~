@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Projet_p2</title>
+        <link href="styleProjet_p2.css" rel="stylesheet">
+    </head>
+    
+    <body>
+    	
+				<div class="nbr_joueurs">
+					<h1>Indiquez le nombre de joueurs</h1>		
+					<input class="joueurs" type="submit" value="2 joueurs" onClick="Afficher2()"/>
+					<input class="joueurs" type="submit" value="3 joueurs" onClick="Afficher3()"/>
+					<input class="joueurs" type="submit" value="4 joueurs" onClick="Afficher4()"/>
+						
+					<div id="divamontrer1" style="display:none;"><input type="text" class="joueur1 " value="joueur1" /></div>
+					<div id="divamontrer2" style="display:none;"><input type="text" class="joueur2 " value="joueur2" /></div>
+					<div id="divamontrer3" style="display:none;"><input type="text" class="joueur3 " value="joueur3" /></div>
+					<div id="divamontrer4" style="display:none;"><input type="text" class="joueur4 " value="joueur4" /></div>
+					
+					<a href="projet.html"><input class="go" type="submit" value="Commencer !" onClick="Afficher()"/></a>
+				</div>
+					
+			
+				<div class="bas"></div>
+		<div id="dateheure">
+					<div id="date"></div>
+					<div id="heure"></div>
+		</div>
+		
+		
+		<script type="text/javascript" src="projet.js">
+		 	
+		</script>
+    </body>
+    
+</html>

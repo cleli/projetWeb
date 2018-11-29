@@ -1,0 +1,59 @@
+body{
+	display: block;
+	color:black;
+	background-color:white;
+}
+
+
+
+.you{
+	display: flex;
+	position: relative;
+	text-align: center;	
+
+		
+}
+
+
+.MegaDiv {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+
+
+.joueur1{
+	position: absolute;
+	top: 0;
+	left: 39%;
+}
+
+.joueur2{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	
+}
+
+.joueur3{
+	bottom: 0;
+	left: 38.5%;
+	position: absolute;
+}
+
+.joueur4{
+	left: 0;
+	top: 50%;
+	position: absolute;
+}
+
+.joueur1, .joueur2, .joueur3, .joueur4{
+	border: 2px solid black ;
+	background-color: rgba(0, 0, 255, 0);
+}
+
+#dateheure{
+position: absolute;
+left: 90%;
+color: black;}
