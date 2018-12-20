@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Projet</title>
+        <link href="styleProjet.css" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+    		<div class="page1" style="display:block;">
+    			<h1 class="tel">Lance ce jeu sur un plus grand écran</h1>
+    			<h1 id="titre">TU VEUX BOIRE ?</h1>
+    			
+    			<div class="nbr_joueurs">
+					<h1 id="phrase">Indiquez le nombre de joueurs</h1>	
+				
+					<div class="separation" >
+						
+						<input class="joueurs" type="submit" value="2 joueurs" onClick="Afficher2()"/>
+						<input class="joueurs" type="submit" value="3 joueurs" onClick="Afficher3()"/>
+						<input class="joueurs" type="submit" value="4 joueurs" onClick="Afficher4()"/>
+						<form class="choix_nb_joueurs">
+						<div id="divamontrer1" style="display:none;"><input type="text" class="joueur1 " value="joueur1" /></div>
+	 					<div id="divamontrer2" style="display:none;"><input type="text" class="joueur2 " value="joueur2" /></div>
+						<div id="divamontrer3" style="display:none;"><input type="text" class="joueur3 " value="joueur3" /></div>
+						<div id="divamontrer4" style="display:none;"><input type="text" class="joueur4 " value="joueur4" /></div>
+						</form>
+					</div>		
+					
+					<div class="separation1"> <input class="go" type="submit" value="Commencer !" onClick="Afficher()"/></div>
+					
+				</div>
+			
+				<div class="bas"></div>
+				
+				<div id="dateheure1">
+					<div id="date"></div>
+					<div id="heure"></div>
+				</div>
+			</div>
+
+<!-- ----------------changement de page-------------- -->
+
+		<progress class="compteurJoueur" value="2" max="4"></progress> 
+		<div class="MegaDiv" style="display:none;">
+			<div class="fond_tapis"><img class="tapis" alt="cute carpet" src="game_carpet.jpg"/> </div>
+			 <div class="deckA"><h2 class="joueurA">Joueur1</h2> 
+			 							<div class="cartes1">
+			 							<img class="deckJ1" src="" alt="">
+			 							<img class="deckJ11" src="" alt="">
+			 							<img class="deckJ111" src="" alt="">
+			 							<img class="deckJ1111" src="" alt="">
+			 							</div>
+			 							</div>
+			 <div class="deckB"><div class="cartes2">
+			 							<img class="deckJ2" src="" alt="">
+			 							<img class="deckJ22" src="" alt="">
+			 							<img class="deckJ222" src="" alt="">
+			 							<img class="deckJ2222" src="" alt="">
+										</div>
+										<h2 class="joueurB">Joueur2</h2>
+			 							</div>
+			<div class="deckC"><div id="divamontrerC" style="display:none;"> 
+									<div class="cartes3">
+									<img class="deckJ3" src="" alt="">
+									<img class="deckJ33" src="" alt="">
+									<img class="deckJ333" src="" alt="">
+									<img class="deckJ3333" src="" alt="">
+									</div>
+									<h2 class="joueurC">Joueur3</h2>
+									</div>
+									</div>
+			<div class="deckD"><div id="divamontrerD" style="display:none;"> 
+									<h2 class="joueurD">Joueur4</h2>
+									<div class="cartes4">
+									<img class="deckJ4" src="" alt="">
+									<img class="deckJ44" src="" alt="">
+									<img class="deckJ444" src="" alt="">
+									<img class="deckJ4444" src="" alt="">
+									</div>
+									</div>
+									</div>
+			<div class="deck"><img  class="return_deck" alt="cute_deck" src="deck.png"/> </div>
+			<div class="instructions"> <div class="question1" style="display:block;"> <div class="tourA" style="display:block;" > <h3 > <span class="changeA">Joueur1 </span><br>
+																																											Parie si la carte sera rouge ou noire</h3> 
+																										 <input class="bouton" type="submit" value="Rouge" onClick="NextA()"/>
+																										 <input class="bouton" type="submit" value="Noir" onClick="NextA()"/> </div>
+																										 
+																										  <div class="tourB" style="display:none;"> <h3> <span class="changeB">Joueur2 </span> <br>
+																										  																Parie si la carte sera rouge ou noire</h3>
+																										 <input class="bouton" type="submit" value="Rouge" onClick="NextB()"/>
+																										 <input class="bouton" type="submit" value="Noir" onClick="NextB()"/></div>
+																										 
+																										  <div class="tourC" style="display:none;"> <h3> <span class="changeC">Joueur3 </span> <br>
+																										  															Parie si la carte sera rouge ou noire</h3>
+																										 <input class="bouton" type="submit" value="Rouge" onClick="NextC()"/>
+																										 <input class="bouton" type="submit" value="Noir" onClick="NextC()"/> </div>
+																										 
+																										  <div class="tourD" style="display:none;"> <h3> <span class="changeD">Joueur4 </span> <br>
+																										  															Parie si la carte sera rouge ou noire</h3>
+																										 <input class="bouton" type="submit" value="Rouge" onClick="NextD()"/>
+																										 <input class="bouton" type="submit" value="Noir" onClick="NextD()"/> </div>
+																										 
+												</div>
+												<div class="gagne1" style="display:none;"> <h3>Bravo ! Distribue une gorgée au joueur de ton choix</h3> 
+																										<div class="distribue"><input class="J1" style="display:block;" type="submit" value="J1" onClick="Augmente1()"/>
+																										<input class="J2" style="display:block;" type="submit" value="J2" onClick="Augmente1()"/>
+																										<input class="J3" style="display:none;" type="submit" value="J3" onClick="Augmente1()"/>
+																										<input class="J4" style="display:none;" type="submit" value="J4" onClick="Augmente1()"/>
+																										</div>
+												</div> 
+												
+												<div class="perdu1" style="display:none;"> <h3>Perdu ! Bois une gorgée </h3> <input class="lost" type="submit" value="Cool j'adore boire " onClick="Augmente1()"/></div> 
+												
+												<div class="question2" style="display:none;"> 
+																										<div class="tourAA" style="display:block;" > <h3 > <span class="changeA">Joueur1 </span> <br>
+																																											Parie si la carte sera sup&eacute;rieure ou inf&eacute;rieure</h3> 
+																										 <input class="bouton" type="submit" value="Plus" onClick="NextAA()"/>
+																										 <input class="bouton" type="submit" value="Moins" onClick="NextAA()"/> </div>
+																										 
+																										  <div class="tourBB" style="display:none;"> <h3> <span class="changeB">Joueur2  </span><br>
+																										  																Parie si la carte sera sup&eacute;rieure ou inf&eacute;rieure</h3>
+																										 <input class="bouton" type="submit" value="Plus" onClick="NextBB()"/>
+																										 <input class="bouton" type="submit" value="Moins" onClick="NextBB()"/></div>
+																										 
+																										  <div class="tourCC" style="display:none;"> <h3> <span class="changeC">Joueur3 </span> <br>
+																										  															Parie si la carte sera sup&eacute;rieure ou inf&eacute;rieure</h3>
+																										 <input class="bouton" type="submit" value="Plus" onClick="NextCC()"/>
+																										 <input class="bouton" type="submit" value="Moins" onClick="NextCC()"/> </div>
+																										 
+																										  <div class="tourDD" style="display:none;"> <h3> <span class="changeD">Joueur4  </span><br>
+																										  															Parie si la carte sera sup&eacute;rieure ou inf&eacute;rieure</h3>
+																										 <input class="bouton" type="submit" value="Plus" onClick="NextDD()"/>
+																										 <input class="bouton" type="submit" value="Moins" onClick="NextDD()"/> </div>
+																										
+												</div>
+												<div class="gagne2" style="display:none;"> <h3>Bravo ! Distribue une gorgée au joueur de ton choix</h3> 
+																										<div class="distribue"><input class="J1" style="display:block;" type="submit" value="J1" onClick="Augmente2()"/>
+																										<input class="J2" style="display:block;" type="submit" value="J2" onClick="Augmente2()"/>
+																										<input class="J33" style="display:none;" type="submit" value="J3" onClick="Augmente2()"/>
+																										<input class="J44" style="display:none;" type="submit" value="J4" onClick="Augmente2()"/>
+																										</div>
+												</div> 
+												
+												<div class="perdu2" style="display:none;"> <h3>Perdu ! Bois une gorgée </h3> <input class="lost" type="submit" value="Cool j'adore boire " onClick="Augmente2()"/> </div> 
+												<div class="question3" style="display:none;"> 
+																											<div class="tourAAA" style="display:block;" > <h3 > <span class="changeA">Joueur1 </span> <br>
+																																											Parie si le nombre sera Int&eacute;rieur ou ext&eacute;rieur</h3> 
+																										 <input class="bouton" type="submit" value="Interieur" onClick="NextAAA()"/>
+																										 <input class="bouton" type="submit" value="Exterieur" onClick="NextAAA()"/> </div>
+																										 
+																										  <div class="tourBBB" style="display:none;"> <h3> <span class="changeB">Joueur2 </span> <br>
+																										  																Parie si le nombre sera Int&eacute;rieur ou ext&eacute;rieur</h3>
+																										 <input class="bouton" type="submit" value="Interieur" onClick="NextBBB()"/>
+																										 <input class="bouton" type="submit" value="Exterieur" onClick="NextBBB()"/></div>
+																										 
+																										  <div class="tourCCC" style="display:none;"> <h3> <span class="changeC">Joueur3 </span> <br>
+																										  															Parie si le nombre sera Int&eacute;rieur ou ext&eacute;rieur</h3>
+																										 <input class="bouton" type="submit" value="Interieur" onClick="NextCCC()"/>
+																										 <input class="bouton" type="submit" value="Exterieur" onClick="NextCCC()"/> </div>
+																										 
+																										  <div class="tourDDD" style="display:none;"> <h3> <span class="changeD">Joueur4  </span><br>
+																										  															Parie si le nombre sera Int&eacute;rieur ou ext&eacute;rieur</h3>
+																										 <input class="bouton" type="submit" value="Interieur" onClick="NextDDD()"/>
+																										 <input class="bouton" type="submit" value="Exterieur" onClick="NextDDD()"/> </div>
+												</div>
+												<div class="gagne3" style="display:none;"> <h3>Bravo ! Distribue une gorgée au joueur de ton choix</h3> 
+																										<div class="distribue"><input class="J1" style="display:block;" type="submit" value="J1" onClick="Augmente3()"/>
+																										<input class="J2" style="display:block;" type="submit" value="J2" onClick="Augmente3()"/>
+																										<input class="J333" style="display:none;" type="submit" value="J3" onClick="Augmente3()"/>
+																										<input class="J444" style="display:none;" type="submit" value="J4" onClick="Augmente3()"/>
+																										</div>
+												</div> 
+												
+												<div class="perdu3" style="display:none;"> <h3>Perdu ! Bois une gorgée </h3>  <input class="lost" type="submit" value="Cool j'adore boire " onClick="Augmente3()"/></div> 
+												<div class="question4" style="display:none;">
+																											<div class="tourAAAA" style="display:block;" > <h3 > <span class="changeA">Joueur1  </span><br>
+																																											Parie la couleur de la carte</h3> 
+																										 <input class="bouton" type="submit" value="Pique" onClick="NextAAAA()"/>
+																										 <input class="bouton" type="submit" value="Coeur" onClick="NextAAAA()"/>
+																										 <input class="bouton" type="submit" value="Carreaux" onClick="NextAAAA()"/>
+																										 <input class="bouton" type="submit" value="Trefle" onClick="NextAAAA()"/> </div>
+																										 
+																										  <div class="tourBBBB" style="display:none;"> <h3> <span class="changeB">Joueur2  </span><br>
+																										  																Parie la couleur de la carte</h3>
+																										 <input class="bouton" type="submit" value="Pique" onClick="NextBBBB()"/>
+																										 <input class="bouton" type="submit" value="Coeur" onClick="NextBBBB()"/>
+																										 <input class="bouton" type="submit" value="Carreaux" onClick="NextBBBB()"/>
+																										 <input class="bouton" type="submit" value="Trefle" onClick="NextBBBB()"/></div>
+																										 
+																										  <div class="tourCCCC" style="display:none;"> <h3> <span class="changeC">Joueur3  </span><br>
+																										  															Parie la couleur de la carte</h3>
+																										 <input class="bouton" type="submit" value="Pique" onClick="NextCCCC()"/>
+																										 <input class="bouton" type="submit" value="Coeur" onClick="NextCCCC()"/>
+																										 <input class="bouton" type="submit" value="Carreaux" onClick="NextCCCC()"/>
+																										 <input class="bouton" type="submit" value="Trefle" onClick="NextCCCC()"/> </div>
+																										 
+																										  <div class="tourDDDD" style="display:none;"> <h3> <span class="changeD">Joueur4  </span><br>
+																										  															Parie la couleur de la carte</h3>
+																										 <input class="bouton" type="submit" value="Pique" onClick="NextDDDD()"/>
+																										 <input class="bouton" type="submit" value="Coeur" onClick="NextDDDD()"/>
+																										 <input class="bouton" type="submit" value="Carreaux" onClick="NextDDDD()"/>
+																										 <input class="bouton" type="submit" value="Trefle" onClick="NextDDDD()"/> </div>
+																									
+												</div> 
+												<div class="gagne4" style="display:none;"> <h3>Bravo ! Distribue une gorgée au joueur de ton choix</h3> 
+																										<div class="distribue"><input class="J1" style="display:block;" type="submit" value="J1" onClick="Augmente4()"/>
+																										<input class="J2" style="display:block;" type="submit" value="J2" onClick="Augmente4()"/>
+																										<input class="J3333" style="display:none;" type="submit" value="J3" onClick="Augmente4()"/>
+																										<input class="J4444" style="display:none;" type="submit" value="J4" onClick="Augmente4()"/>
+																										</div>
+												</div> 
+												
+												<div class="perdu4" style="display:none;"> <h3>Perdu ! Bois une gorgée </h3>  <input class="lost" type="submit" value="Cool j'adore boire " onClick="Augmente4()"/></div> 
+												<div class="gagne5" style="display:none;"> <h3>Bravo ! Distribue une gorgée au joueur de ton choix</h3> 
+																										<div class="distribue"><input class="J1" style="display:block;" type="submit" value="J1" onClick="Augmente5()"/>
+																										<input class="J2" style="display:block;" type="submit" value="J2" onClick="Augmente5()"/>
+																										<input class="J33333" style="display:none;" type="submit" value="J3" onClick="Augmente5()"/>
+																										<input class="J44444" style="display:none;" type="submit" value="J4" onClick="Augmente5()"/>
+																										</div>
+												</div> 
+												
+												<div class="perdu5" style="display:none;"> <h3>Perdu ! Bois une gorgée </h3>  <input class="lost" type="submit" value="Cool j'adore boire " onClick="Augmente5()"/></div> 
+												<div class="termine" style="display:none;"> <h3>C'est fini ! Prends pas la voiture, t'as encore trop bu !</h3> </div> 
+			</div>							
+			<div id="dateheure2">
+					<div id="date"></div>
+					<div id="heure"></div>
+			</div>
+		
+		</div>
+		
+	<script type="text/javascript" src="projet.js" >
+		
+	</script>
+  </body>
+    
+</html>

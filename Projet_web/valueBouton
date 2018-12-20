@@ -1,0 +1,19 @@
+document.querySelector('.J1').value = document.querySelector('.joueur1').value; 
+document.querySelector('.J2').value = document.querySelector('.joueur2').value; 
+document.querySelector('.J3').value = document.querySelector('.joueur3').value; 
+document.querySelector('.J4').value = document.querySelector('.joueur4').value; 
+
+document.querySelector('.J11').value = document.querySelector('.joueur1').value; 
+document.querySelector('.J22').value = document.querySelector('.joueur2').value; 
+document.querySelector('.J33').value = document.querySelector('.joueur3').value; 
+document.querySelector('.J44').value = document.querySelector('.joueur4').value; 
+
+document.querySelector('.J111').value = document.querySelector('.joueur1').value; 
+document.querySelector('.J222').value = document.querySelector('.joueur2').value; 
+document.querySelector('.J333').value = document.querySelector('.joueur3').value; 
+document.querySelector('.J444').value = document.querySelector('.joueur4').value; 
+
+document.querySelector('.J1111').value = document.querySelector('.joueur1').value; 
+document.querySelector('.J2222').value = document.querySelector('.joueur2').value; 
+document.querySelector('.J3333').value = document.querySelector('.joueur3').value; 
+document.querySelector('.J4444').value = document.querySelector('.joueur4').value; 

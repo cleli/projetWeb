@@ -1,0 +1,46 @@
+function Next1(){
+		const question1 = document.querySelector('.question1');
+		const tourA = document.querySelector('.tourA');
+		const tourB = document.querySelector('.tourB');
+		const gagne = document.querySelector('.gagne');
+		
+		tourA.style.display = 'none';
+		tourB.style.display = 'block';
+		question1.style.display = 'none';
+		gagne.style.display = 'block';	
+
+		document.querySelector('.question1').onClick = function(){Next1();};
+		document.querySelector('.question1').setAttribute('onClick',function(){Next2();});
+		
+}
+
+function Next2(){
+		const question1 = document.querySelector('.question1');
+		const tourB = document.querySelector('.tourB');
+		const tourC = document.querySelector('.tourC');
+		const gagne = document.querySelector('.gagne');
+		
+		tourA.style.display = 'none';
+		tourB.style.display = 'none';
+		tourC.style.display = 'block';
+		question1.style.display = 'none';
+		gagne.style.display = 'block';	
+		document.querySelector('.question1').onClick = function(){Next2();};
+		document.querySelector('.question1').setAttribute('onClick',function(){Next3();});
+}
+
+function Next3(){
+	const question1 = document.querySelector('.question1');
+		const tourC = document.querySelector('.tourC');
+		const tourD = document.querySelector('.tourD');
+		const gagne = document.querySelector('.gagne');
+		
+		tourA.style.display = 'none';
+		tourB.style.display = 'none';
+		tourC.style.display = 'none';
+		tourD.style.display = 'block';
+		question1.style.display = 'none';
+		gagne.style.display = 'block';	
+		document.querySelector('.question2').className = "question1"; 
+		document.querySelector('.question1').className = "question2"; 
+}

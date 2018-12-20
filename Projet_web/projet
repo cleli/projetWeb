@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Projet</title>
+        <link href="styleProjet.css" rel="stylesheet">
+    </head>
+    
+    <body>
+		<div class="MegaDiv">
+			<img class="tapis" alt="cute carpet" src="tapis_jeux.jpg"/> 
+			<h2 class="joueur1">joueur1</h2>
+			<h2 class="joueur2">joueur2</h2>
+			<h2 class="joueur3">joueur3</h2>
+			<h2 class="joueur4">joueur4</h2>
+		</div>
+
+    
+    </body>
+    
+</html>
